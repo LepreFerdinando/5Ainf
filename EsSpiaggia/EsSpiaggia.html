@@ -1,0 +1,165 @@
+<html lang="it">
+<head>
+<!--istruzioni per il bootstrap-->
+
+<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="author" content="Lepre">
+		<meta name="description" content="Prenotazione ombrelli">
+		
+		<title>Tabella Cognome Nome</title>
+		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/custom.css" rel="stylesheet">
+		<script href="vendor/bootstrap/js/bootstrap.js"></script>
+		<script type="application/javascript" src="js/script.js"></script>
+		<script type="application/javascript" src="vendor/jquery/jquery-3.4.1.js"></script>
+        
+        <script>
+        
+        $(document).ready(
+            function(){
+
+            $("#btnPrenota").click(function(){
+                var riga = $("#riga").val();
+                var colonna = $("#colonna").val();
+
+                var idOmbrello = "#r"+riga+"c"+colonna;
+
+                    console.log(idOmbrello);
+
+                
+                var valoreOmbrello = $(idOmbrello).text();
+                console.log(valoreOmbrello);
+
+                if(valoreOmbrello != "prenotato" && riga<8 && riga>0 && colonna<5 && colonna>0 ){
+
+                    $(idOmbrello).text("prenotato");
+
+                }else{
+                    alert("Quell'ombrellone è già prenotato");
+                }
+
+                
+
+                
+
+
+            });
+            
+            
+            
+            });
+        
+        
+        
+        
+        </script>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row" style="margin-top: 20px">
+            <div class="col-sm-4">						
+            </div>
+            <div class="col-sm-4">
+               
+                    
+                    <div class="form-group input-group">
+                        <input type="text" id="riga" name="riga" class="form-control" placeholder="Riga" />
+                    </div>
+
+                    <div class="form-group input-group">
+                        <input type="text" id="colonna" name="colonna" class="form-control" placeholder="Colonna" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" id="btnPrenota" value="Prenota" class="btn btn-secondary form-control"/> 
+                    </div>
+
+                
+            </div>
+            <div class="col-sm-4">						
+            </div>
+        </div>
+    <!--</div>-->
+</div>
+
+
+	<div class="container-fluid">
+        <div class="row" style="margin-top: 20px">
+            <div class="col-sm-4">						
+            </div>
+            <div class="col-sm-4">
+                <!--class="table table-hover"-->
+                <table id="idTabella" class="table table-hover" border="1" >
+                    <tr>
+                        <th>FILA/COLONNA</th>
+						<th>COLONNA 1</th>
+						<th>COLONNA 2</th>
+                        <th>COLONNA 3</th>
+                        <th>COLONNA 4</th>
+                        <th>COLONNA 5</th>
+                        <th>COLONNA 6</th>
+                        <th>COLONNA 7</th>
+                    </tr>
+                    <tr>
+                        <td>FILA 1</td>
+						<td id="r1c1">Libero</td>
+                        <td id="r1c2">Libero</td>
+                        <td id="r1c3">Libero</td>				
+                        <td id="r1c4">Libero</td>
+                        <td id="r1c5">Libero</td>
+                        <td id="r1c6">Libero</td>
+                        <td id="r1c7">Libero</td>
+                    </tr>
+                    <tr>
+                        <td>FILA 2</td>
+						<td id="r2c1">Libero</td>
+                        <td id="r2c2">Libero</td>
+                        <td id="r2c3">Libero</td>				
+                        <td id="r2c4">Libero</td>
+                        <td id="r2c5">Libero</td>
+                        <td id="r2c6">Libero</td>
+                        <td id="r2c7">Libero</td>
+                    </tr>
+                    <tr>
+                        <td>FILA 3</td>
+						<td id="r3c1">Libero</td>
+                        <td id="r3c2">Libero</td>
+                        <td id="r3c3">Libero</td>				
+                        <td id="r3c4">Libero</td>
+                        <td id="r3c5">Libero</td>
+                        <td id="r3c6">Libero</td>
+                        <td id="r3c7">Libero</td>
+                    </tr>
+                    <tr>
+                        <td>FILA 4</td>
+						<td id="r4c1">Libero</td>
+                        <td id="r4c2">Libero</td>
+                        <td id="r4c3">Libero</td>				
+                        <td id="r4c4">Libero</td>
+                        <td id="r4c5">Libero</td>
+                        <td id="r4c6">Libero</td>
+                        <td id="r4c7">Libero</td>
+                    </tr>
+                    <tr>
+                        <td>FILA 5</td>
+						<td id="r5c1">Libero</td>
+                        <td id="r5c2">Libero</td>
+                        <td id="r5c3">Libero</td>				
+                        <td id="r5c4">Libero</td>
+                        <td id="r5c5">Libero</td>
+                        <td id="r5c6">Libero</td>
+                        <td id="r5c7">Libero</td>
+					</tr>
+
+                </div>
+            </div>
+            <div class="col-sm-4">						
+            </div>
+        </div>
+		</div>
+    </body>
+
+</html>
