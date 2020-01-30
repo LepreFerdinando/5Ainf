@@ -1,0 +1,22 @@
+.green {
+	background-color: green;
+	margin: 40px dotted black;
+	}
+	
+.yellow {
+	background-color: yellow;
+	}
+	
+.red {
+	background-color: red;
+	}
+	
+.orange {
+	background-color: orange;
+	}
+
+#larghezzaRiga {
+	border: 20px solid red;
+	padding: 30px dashed blue;
+	margin: 40px dotted orange;
+	}
